@@ -167,13 +167,11 @@ class Phergie_Plugin_SaveUrls extends Phergie_Plugin_Abstract
 
             $title = $this->getTitle($url);
             //if (!empty($title)) {
-                $responses[] = 
-                    array(
-                        'title' => $title,
-                        'url' => $url,
-                        'channel' => $source,
-                        'user' => $user
-                    ),
+                $responses[] = array(
+                    'title' => $title,
+                    'url' => $url,
+                    'channel' => $source,
+                    'user' => $user
                 );
             //}
 
