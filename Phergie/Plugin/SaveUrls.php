@@ -198,7 +198,7 @@ class Phergie_Plugin_SaveUrls extends Phergie_Plugin_Abstract
             }
 
             foreach ($responses as $response) {
-                $response['title'];
+		var_dump($response);
                 // TODO, save in DB
                 $mysqli->query("
                     INSERT INTO urls (nick, channel, title, url)

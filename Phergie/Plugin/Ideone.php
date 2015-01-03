@@ -79,8 +79,8 @@ class Phergie_Plugin_Ideone extends Phergie_Plugin_Abstract
         $nick = $this->event->getNick();
 
         // Get authentication credentials
-        $user = $this->getConfig('ideone.user', 'test');
-        $pass = $this->getConfig('ideone.pass', 'test');
+        $user = $this->getConfig('ideone.user', 'mikemike86');
+        $pass = $this->getConfig('ideone.pass', '92069206');
 
         // Normalize the command parameters
         $language = strtolower($language);
@@ -103,6 +103,7 @@ class Phergie_Plugin_Ideone extends Phergie_Plugin_Abstract
         // Identify the language to use
         $client = new SoapClient('http://ideone.com/api/1/service.wsdl');
         $response = $client->getLanguages($user, $pass);
+
         if ($this->isError($response)) {
             return;
         }
