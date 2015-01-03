@@ -73,7 +73,7 @@ class Phergie_Plugin_Ideone extends Phergie_Plugin_Abstract
      *
      * @return void
      */
-    public function onCommandIdeone($language, $code)
+    public function onCommandRuncode($language, $code)
     {
         $source = $this->event->getSource();
         $nick = $this->event->getNick();
