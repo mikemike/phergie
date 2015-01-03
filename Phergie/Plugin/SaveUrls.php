@@ -159,12 +159,6 @@ class Phergie_Plugin_SaveUrls extends Phergie_Plugin_Abstract
                 }
             }
 
-            // Prevent spamfest
-            if ($this->checkUrlCache($url)) {
-                $this->debug('Invalid Url: URL is in the cache. (' . $url . ')');
-                continue;
-            }
-
             $title = $this->getTitle($url);
             //if (!empty($title)) {
                 $responses[] = array(
@@ -198,8 +192,6 @@ class Phergie_Plugin_SaveUrls extends Phergie_Plugin_Abstract
             }
 
             foreach ($responses as $response) {
-                $response['title'];
-                // TODO, save in DB
                 $mysqli->query("
                     INSERT INTO urls (nick, channel, title, url)
                     VALUES (
