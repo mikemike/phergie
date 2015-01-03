@@ -186,7 +186,7 @@ class Phergie_Plugin_SaveUrls extends Phergie_Plugin_Abstract
             $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
 
             if ($mysqli->connect_error) {
-                $this->isError('Connect Error (' . $mysqli->connect_errno . ') '
+                $this->debug('Connect Error (' . $mysqli->connect_errno . ') '
                         . $mysqli->connect_error);
                 return;
             }
