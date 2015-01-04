@@ -198,10 +198,10 @@ class Phergie_Plugin_SaveUrls extends Phergie_Plugin_Abstract
                 $mysqli->query("
                     INSERT INTO urls (nick, channel, title, url)
                     VALUES (
-                        '". mysqli_real_escape_string($response['user']) ."',
-                        '". mysqli_real_escape_string($response['channel']) ."',
-                        '". mysqli_real_escape_string($response['title']) ."',
-                        '". mysqli_real_escape_string($response['url']) ."'
+                        '". $mysqli->real_escape_string($response['user']) ."',
+                        '". $mysqli->real_escape_string($response['channel']) ."',
+                        '". $mysqli->real_escape_string($response['title']) ."',
+                        '". $mysqli->real_escape_string($response['url']) ."'
                     )
                 ");
             }
