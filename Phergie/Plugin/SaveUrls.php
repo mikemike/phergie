@@ -180,10 +180,11 @@ class Phergie_Plugin_SaveUrls extends Phergie_Plugin_Abstract
         if (count($responses) > 0) {
             
             $dbhost = $this->getConfig('saveurls.dbhost');
+            $dbport = $this->getConfig('saveurls.dbport');
             $dbuser = $this->getConfig('saveurls.dbuser');
             $dbpass = $this->getConfig('saveurls.dbpass');
             $dbname = $this->getConfig('saveurls.dbname');
-            $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname);
+            $mysqli = new mysqli($dbhost, $dbuser, $dbpass, $dbname, $dbport);
 
             if ($mysqli->connect_error) {
                 $this->debug('Connect Error (' . $mysqli->connect_errno . ') '
