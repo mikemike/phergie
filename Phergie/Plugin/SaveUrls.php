@@ -571,9 +571,6 @@ class Phergie_Plugin_SaveUrls extends Phergie_Plugin_Abstract
             } else {
                 $title = 'No Title';
             }
-        } else {
-            $titleLength = $this->getConfig('url.titleLength', 40);
-            $title = $this->decode($title, $titleLength);
         }
 
         return $title;
