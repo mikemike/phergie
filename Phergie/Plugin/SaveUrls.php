@@ -626,7 +626,7 @@ class Phergie_Plugin_SaveUrls extends Phergie_Plugin_Abstract
                     $url = $parsed['glued'];
                 }
 
-                $event->setArgument(1, $text);
+                //$event->setArgument(1, $text);
                 break;
             }
         }
